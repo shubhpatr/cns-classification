@@ -4,6 +4,8 @@ Summary of all Models
 
 ![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/table.JPG)
 
+Also provided keras models for reference.
+
 
 
 ## Visualization Task
