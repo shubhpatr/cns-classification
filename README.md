@@ -30,7 +30,7 @@ For test dataset, predictions = 6,6,6,6,6
 
 VGG Model
 
-Model performs well few epochs in, accuracy improves till 96% for test dataset. 
+Model performs well few epochs in, accuracy improves till 96% for train dataset. 
 ![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/vgg.JPG)
 
 Makes intelligent predictions
