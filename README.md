@@ -16,55 +16,50 @@ Code is given in visualization.py
 
 Baseline Model
 
-### Dependencies
+The model doesn't learn anything useful after a few predictions.
+![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/baselineTR.JPG)
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
 
-### Installing
+Always predicts 6. 
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+For test dataset, predictions = 6,6,6,6,6
 
-### Executing program
+![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/baselinehist.png)
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
 
-## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+VGG Model
 
-## Authors
+Model performs well few epochs in, accuracy improves till 96% for test dataset. 
+![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/vgg.JPG)
 
-Contributors names and contact info
+Makes intelligent predictions
+For test dataset, predictions = 0,0,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,6,2,5,5,5,5,5,6,10,10,6,6,6,6,6,6,6,6,6,6,6,6,10,6,6,10,6,6,6,6,8,2,8,3,6,10,10,10
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/vgghist.png)
+Resnet Model
 
-## Version History
+Model performs very slow while training, performance doesn't improve. 
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+Mostly predicts  6 like baseline
+For test dataset, predictions = 6,6,6,6,6,6,10,6,6,6,6,6,6,6,10,6,6,6,6,6,6,6,6,10,10,10,10,10,10,6,6,6,6,10,6,6,6,6,6,6,6,10,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 
-## License
+![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/resnethist.png)
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+Inception Model
 
-## Acknowledgments
+Model performs well with training data. 
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+
+Makes intelligent predictions, though incorrect
+For test dataset, predictions = 0,0,1,1,6,6,2,2,8,8,2,2,2,2,2,6,8,2,2,3,2,6,4,8,5,5,5,5,5,6,6,6,0,6,8,6,6,10,10,6,8,6,6,6,4,2,2,6,6,6,6,2,8,8,8,6,4,2,6,10
+![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/incepthist.png)
+
+### Observations
+
+* Used Data Augmentation, to populate the scarce training dataset, using rotations and adding noised
+* Class Imbalance, mitigated using class weights
+
+### Why some Images are classified incorrectly?
+
+This is primarily due to the limited dataset, even with augmentation, we have just one image for training for few tissue types, this makes it challenging to model that will accurrately predict for each class. 
