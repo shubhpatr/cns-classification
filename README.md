@@ -1,12 +1,20 @@
 # CNS Classification Report
 
-Simple overview of use/purpose.
+Summary of all Models
 
-## Description
+![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/table.JPG)
 
-An in-depth paragraph about your project and overview of use.
 
-## Getting Started
+
+## Visualization Task
+
+![alt text](https://github.com/shubhpatr/cns-classification/blob/main/plots/tsne.JPG)
+
+Code is given in visualization.py
+
+## Summary and Predictions of Models
+
+Baseline Model
 
 ### Dependencies
 
